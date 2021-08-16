@@ -126,7 +126,7 @@ section div.todo button {
 }
 
 section div.todo button.complete {
-  background-color: green;
+  background-color: #82c93a;
 }
 
 section div.todo button.trash {
