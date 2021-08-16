@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//避免再點擊button時，點到icon，造成輸出失敗
+i {
+    pointer-events: none;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(84, 255, 212), rgb(250, 206, 110));
+}
+
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: white;
+    font-size: 3rem;
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input,
+  button {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+    margin: 0.1rem;
+  }
+
+  input[type="number"] {
+    width: 50px;
+    text-align: center;
+  }
+
+  //input number arrows remove 隱藏小箭頭
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  button {
+    // 滑鼠移過去顯示手指點告知使用者
+    cursor: pointer;
+    background-color: rgb(228, 110, 56);
+    color: white;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div.todo {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    margin: 0.2ren 0rem;
+    transition: all 0.1s ease;
+
+    p {
+      background-color: white;
+      color: black;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+    }
+    p.todo-text {
+      width: 50%;
+    }
+    p.todo-time {
+      width: 20%;
+      text-align: center;
+    }
+    button {
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+      border: none;
+      // 滑鼠移過去顯示手指點告知使用者
+      cursor: pointer;
+      color: white;
+    }
+
+    button.complete {
+      background-color: green;
+    }
+    button.trash {
+      background-color: red;
+    }
+  }
+}
+
+.done{
+    opacity: 0.5;
+    //	文字增加刪除線特效
+    text-decoration: line-through;
+    text-decoration-thickness: 0.2rem;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

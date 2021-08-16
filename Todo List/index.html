@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1>Portia Chen Todo List</h1>
+    </header>
+
+    <form>
+        <!-- required 提交前必填入 -->
+        <input type="text">
+        <input type="number" min="1" max="12" placeholder="M" required>
+        <input type="number" min="1" max="31" placeholder="D" required>
+        <button type="submit">Add into List</button>
+
+    </form>
+    
+    <br>
+    <br>
+  
+    <!-- 依據時間作排列 -->
+    <div class="sort">
+        <button>Sort By Time</button>
+    </div>
+    
+    <section></section>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
+
+
